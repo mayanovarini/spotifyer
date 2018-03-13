@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Playlist from '../Playlist/Playlist';
+import TrackList from '../TrackList/TrackList';
 
 class SearchResults extends React.Component {
   render() {
