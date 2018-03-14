@@ -27,17 +27,19 @@ class App extends Component {
   }
   render() {
     console.log(this.state.searchResults);
-    
+
     return (
       <div>
-        <h1>Spotifyer</h1>
-        <div className="App">
-          <SearchBar />
-          <div className="App-playlist">
-           <SearchResults searchResults={this.state.searchResults} />
-           <Playlist />
-          </div>
+        <div className="Head-bar">
+          <h1><img id="spotifyer" alt="spotifyer logo" src="/spotifyer.png" />Spotifyer</h1>
         </div>
+          <div className="App">
+            <SearchBar />
+            <div className="App-playlist">
+             <SearchResults searchResults={this.state.searchResults} />
+             <Playlist />
+            </div>
+          </div>
       </div>
     );
   }
