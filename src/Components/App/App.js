@@ -26,6 +26,8 @@ class App extends Component {
     }
   }
   render() {
+    console.log(this.state.searchResults);
+    
     return (
       <div>
         <h1>Spotifyer</h1>
