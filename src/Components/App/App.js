@@ -22,9 +22,18 @@ class App extends Component {
         track,
         track,
         track
+      ],
+      playlistName : 'Playlist Title',
+      playlistTracks : [
+        track,
+        track,
+        track,
+        track,
+        track
       ]
     }
   }
+
   render() {
     console.log(this.state.searchResults);
 
@@ -37,7 +46,7 @@ class App extends Component {
             <SearchBar />
             <div className="App-playlist">
              <SearchResults searchResults={this.state.searchResults} />
-             <Playlist />
+             <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
             </div>
           </div>
       </div>

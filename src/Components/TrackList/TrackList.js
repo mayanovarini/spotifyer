@@ -4,6 +4,7 @@ import Track from '../Track/Track';
 
 class TrackList extends Component{
   render(){
+    console.log("tracklist props", this.props);
     return(
       <div className="TrackList">
           { this.props.tracks.map(track => <Track key={track.id} track={track} />) }

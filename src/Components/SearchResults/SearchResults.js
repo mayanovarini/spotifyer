@@ -6,13 +6,12 @@ class SearchResults extends Component {
 
 
   render() {
-    console.log(this.props.searchResults);
+    console.log("search results props", this.props);
     return(
       <div className="SearchResults">
-      <h2>Results</h2>
-      <TrackList tracks={this.props.searchResults}/>
-
-    </div>
+        <h2>Results</h2>
+        <TrackList tracks={this.props.searchResults}/>
+      </div>
     );
   }
 }
