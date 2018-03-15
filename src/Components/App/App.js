@@ -36,10 +36,10 @@ class App extends Component {
   }
 
   addTrack(track) {
-    if(!this.state.playlistTracks.includes(track.id)) {
-      let tracks = this.state.playlistTracks;
-      tracks.push(track);
+    let tracks = this.state.playlistTracks;
 
+    if(!this.state.playlistTracks.includes(track.id)) {
+      tracks.push(track);
       this.setState({
         playlistTracks: tracks
       });
