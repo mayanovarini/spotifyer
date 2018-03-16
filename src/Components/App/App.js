@@ -34,6 +34,7 @@ class App extends Component {
     }
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
   }
 
   addTrack(track) {
@@ -51,10 +52,16 @@ class App extends Component {
     let tracks = this.state.playlistTracks;
     // filter only tracks that are not the currentTrack / the chosen Track to be removed
     tracks = tracks.filter( currentTrack => currentTrack.id !== track.id );
-
+    console.log("tracks that are left now", tracks, "length is", tracks.length)
     this.setState( {
       playlistTracks: tracks
     });
+  }
+
+  updatePlaylistName(name) {
+    this.setState({
+      playlistName: name
+    })
   }
 
   render() {
@@ -74,8 +81,9 @@ class App extends Component {
 
              <Playlist onRemove={this.removeTrack}
                        playlistName={this.state.playlistName}
-                       playlistTracks={this.state.playlistTracks} />
-                       
+                       playlistTracks={this.state.playlistTracks}
+                       onNameChange={this.updatePlaylistName} />
+
             </div>
           </div>
       </div>
