@@ -6,7 +6,7 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: term
+      term: ''
     }
 
     this.search = this.search.bind(this);
