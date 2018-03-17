@@ -36,6 +36,7 @@ class App extends Component {
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
+    this.search = this.search.bind(this);
   }
 
   addTrack(track) {
@@ -69,6 +70,10 @@ class App extends Component {
     const trackURIs = this.state.playlistTracks.map(track => track.uri);
   }
 
+  search(term) {
+    console.log("the term from search app is", term);
+  }
+
   render() {
     console.log(this.state.searchResults);
 
@@ -78,7 +83,7 @@ class App extends Component {
           <h1><img id="spotifyer" alt="spotifyer logo" src="/spotifyer.png" />Spotifyer</h1>
         </div>
           <div className="App">
-            <SearchBar />
+            <SearchBar onSearch={this.search}/>
             <div className="App-playlist">
 
              <SearchResults searchResults={this.state.searchResults}
