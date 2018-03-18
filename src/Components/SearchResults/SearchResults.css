@@ -2,8 +2,13 @@
   width: 50%;
   height: 950px;
   overflow-y: scroll;
-  padding: .88rem;
+  padding: 2rem;
   background-color: rgba(177, 174, 97, 0.81);
+}
+
+h2 {
+  font-size: 1.55rem;
+  border-bottom: 1px solid #6f6f6f;
 }
 
 ::-webkit-scrollbar {
