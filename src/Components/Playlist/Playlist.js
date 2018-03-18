@@ -20,11 +20,15 @@ class Playlist extends Component {
   render(){
     return(
       <div className="Playlist">
-        <input onChange={this.handleNameChange} value={this.props.playlistName}/>
-        <TrackList tracks={this.props.playlistTracks}
-                   isRemoval={true}
-                   onRemove={this.props.onRemove}
-        />
+        <div className="Input-name">
+          <input onChange={this.handleNameChange} value={this.props.playlistName}/>
+        </div>
+        <div className="Track-list">
+          <TrackList tracks={this.props.playlistTracks}
+                     isRemoval={true}
+                     onRemove={this.props.onRemove}
+          />
+        </div>
         <a className="Playlist-save" onClick={this.save}>SAVE TO SPOTIFY</a>
       </div>
     );

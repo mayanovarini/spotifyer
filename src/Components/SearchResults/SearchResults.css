@@ -1,9 +1,16 @@
 .SearchResults {
   width: 50%;
   height: 950px;
-  overflow-y: scroll;
   padding: 2rem;
   background-color: rgba(177, 174, 97, 0.81);
+  display: flex;
+  flex-direction: column;
+}
+
+.List {
+  flex-grow: 1;
+  overflow-y: scroll;
+
 }
 
 h2 {

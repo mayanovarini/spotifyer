@@ -9,8 +9,10 @@ class SearchResults extends Component {
     console.log("search results props", this.props);
     return(
       <div className="SearchResults">
-        <h2>Results</h2>
-        <TrackList tracks={this.props.searchResults} onAdd={this.props.onAdd}/>
+        <div className="Title"><h2>Results</h2></div>
+        <div className="List">
+          <TrackList tracks={this.props.searchResults} onAdd={this.props.onAdd}/>
+        </div>
       </div>
     );
   }

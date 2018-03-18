@@ -1,14 +1,17 @@
 .Playlist {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow-y: scroll;
   width: 37%;
   max-height: 950px;
   padding: 2rem;
   background-color: rgba(177, 174, 97, 0.81);
 }
 
+.Track-list {
+  overflow-y: scroll;
+  flex-grow: 1;
+  padding: 0;
+}
 .Playlist input {
   width: 100%;
   border: 0;
@@ -21,7 +24,6 @@
   padding: 0;
   margin: 0;
   line-height: 60px;
-
 }
 
 .Playlist-save {
@@ -34,6 +36,7 @@
   text-align: center;
   font-size: .83rem;
   transition: background-color .25s;
+  align-self: center;
 }
 
 .Playlist-save:hover {
