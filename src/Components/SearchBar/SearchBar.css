@@ -21,7 +21,7 @@
   outline: none;
 }
 
-.SearchBar button {
+.SearchBar a {
   cursor: pointer;
   color: white;
   border: none;
@@ -32,8 +32,9 @@
   text-align: center;
   font-size: .833rem;
   transition: background-color .25s;
+  text-decoration: none;
 }
 
-.SearchBar button:hover {
+.SearchBar a:hover {
   background-color: rgba(225, 188, 71, 0.69);
 }

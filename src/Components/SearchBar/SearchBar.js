@@ -13,7 +13,7 @@ class SearchBar extends Component {
     this.handleTermChange = this.handleTermChange.bind(this);
   }
 
-  search(){
+  search(e){
     console.log("search term state is", this.state.term);
     this.props.onSearch(this.state.term);
   }
@@ -28,7 +28,7 @@ class SearchBar extends Component {
     return(
       <div className="SearchBar">
         <input onChange={this.handleTermChange} placeholder="Enter A Song, Album, or Artist" />
-        <button onClick={this.search}>SEARCH</button>
+        <a href="#" onClick={this.search}>SEARCH</a>
       </div>
     );
   }

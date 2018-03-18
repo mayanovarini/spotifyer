@@ -9,6 +9,7 @@
 h2 {
   font-size: 1.55rem;
   border-bottom: 1px solid #6f6f6f;
+  line-height: 60px;
 }
 
 ::-webkit-scrollbar {
