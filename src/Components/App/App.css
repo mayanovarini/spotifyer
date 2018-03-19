@@ -39,9 +39,15 @@ h2 {
 
 .Head-bar {
   display: flex;
+  flex-direction: column;
   background-color: #e1bc47;
   justify-content: center;
   align-items: center;
+}
+
+#spanit a {
+  font-size: 13px;
+  color: rgb(242, 242, 242);
 }
 
 .Head-bar img {
