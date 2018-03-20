@@ -24,7 +24,6 @@ class Playlist extends Component {
           <input onChange={this.handleNameChange} value={this.props.playlistName}/>
         </div>
         <div className="Track-list">
-          <h3>No song</h3>
           <TrackList tracks={this.props.playlistTracks}
                      isRemoval={true}
                      onRemove={this.props.onRemove}

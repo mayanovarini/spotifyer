@@ -28,7 +28,7 @@ class SearchBar extends Component {
   render(){
     return(
       <div className="SearchBar">
-        <input onSubmit={this.search} onChange={this.handleTermChange} placeholder="Enter A Song, Album, or Artist" />
+        <input onSubmit={this.search} onChange={this.handleTermChange} placeholder="Enter A Song" />
         <a href="#" onClick={this.search}>SEARCH</a>
       </div>
     );
