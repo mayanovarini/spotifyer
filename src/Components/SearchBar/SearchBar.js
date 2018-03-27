@@ -11,12 +11,21 @@ class SearchBar extends Component {
 
     this.search = this.search.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
+    this.searchOnEnter = this.searchOnEnter.bind(this);
   }
 
   search(e){
     e.preventDefault();
     console.log("search term state is", this.state.term);
     this.props.onSearch(this.state.term);
+  }
+
+  searchOnEnter(e){
+    if(e.key === 'Enter') {
+      console.log("the key enter is presssed and search term state is", this.state.term);
+      this.props.onSearch(this.state.term);
+      e.preventDefault();
+    }
   }
 
   handleTermChange(e){
@@ -28,7 +37,7 @@ class SearchBar extends Component {
   render(){
     return(
       <div className="SearchBar">
-        <input onSubmit={this.search} onChange={this.handleTermChange} placeholder="Enter A Song" />
+        <input onChange={this.handleTermChange} placeholder="Enter A Song" onKeyPress={this.searchOnEnter} />
         <a href="#" onClick={this.search}>SEARCH</a>
       </div>
     );

@@ -6,8 +6,6 @@ import SearchResults from '../SearchResults/SearchResults';
 import Spotify from '../../util/Spotify';
 
 
-// TODO : onchange playlist name and saveplaylist messed up
-
 class App extends Component {
 
   constructor(props){

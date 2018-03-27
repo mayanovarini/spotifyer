@@ -1,5 +1,5 @@
 const clientId = '28f62eac59e64a4397138f9a08ed77ea'; // Insert client ID here.
-const redirectUri = 'https://spotifyer-45fbb.firebaseapp.com/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
+const redirectUri = window.location.href; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 
 let accessToken;
 
